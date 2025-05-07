@@ -29,7 +29,7 @@ class NoteItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
-              title:  Text(
+              title: Text(
                 note.title,
                 style: TextStyle(color: Colors.black, fontSize: 26),
               ),
@@ -44,7 +44,9 @@ class NoteItem extends StatelessWidget {
                 ),
               ),
               trailing: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  note.delete();
+                },
                 icon: Icon(
                   FontAwesomeIcons.trash,
                   color: Colors.black,
